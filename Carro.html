@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Carreras</title>
+    </head>
+    <body>
+        <img id="carro1" src="carro.png.png" style="position:absolute;left:0px;width: 120px; height: 120px;">
+        
+        <script>
+            let contador = 0;
+            let proceso;
+
+            function moverCarro() {
+                if (contador <= 500) {
+                    let carro1 = document.getElementById("carro1");
+                    carro1.style.left = contador + "px";
+                    contador += 20;
+                    console.log(carro1.style.left);
+                } else {
+                   clearInterval(proceso);
+                   console.log("Carrera terminada");
+                }
+            }
+            
+            proceso = setInterval(moverCarro, 100);
+
+        </script>
+    </body>
+</html>
+This paste expires in <8 hours. Public IP access. Share whatever you see with others in seconds with Context.Terms of ServiceReport this
